@@ -1,0 +1,593 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    background-color: white;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    background-color: rgb(230, 132, 5);
+}
+
+.nav-container{
+    width: 100%;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: 999;
+    background-color: white;
+    border-bottom: 1px solid rgb(207, 205, 205);
+}
+
+.navContainer{
+       background-color: rgba(255, 255, 255, 0.055);
+       backdrop-filter: blur(20px);
+}
+
+.nav-box{
+    max-width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-box h1{
+    font-family: system-ui;
+    font-size: 2rem;
+    cursor: default;
+}
+
+.policy-btn{
+    padding: 10px 24px;
+    font-family: system-ui;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(35deg, black, rgb(33, 34, 34));
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.policy-btn:hover{
+    transform: translateY(5px);
+}
+
+.hero-page{
+    
+    min-height: 100vh;
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1rem;
+ 
+}
+
+.hero-page::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -50%;
+    background: linear-gradient(135deg,white, rgb(236, 242, 252));
+    border-bottom: 4px solid lavender;
+    border-radius: 50%;
+}
+
+.container-wrapper{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    place-items: center;
+    z-index: 2;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.profile-pic{
+    max-width: 100%;
+    width: 300px;
+    border-radius: 50%;
+    margin: 0;
+    display: block;
+    animation: popMove 3s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes popMove {
+  0%{
+        transform: translateY(20px);
+        box-shadow: 0 5px 8px rgb(43, 42, 41);
+    }
+   
+      100%{
+       transform: translateY(0px);
+        box-shadow: 10px 0px -4px rgb(43, 42, 41);
+    }
+}
+
+.picShow{
+    padding: 1rem;
+}
+
+.personal-intro{
+    padding: 1rem; 
+    margin: 0;  
+    text-align: left; 
+    transition: .3s ease-in-out;
+     animation: topDown 3s ease-in-out infinite alternate;
+}
+
+@keyframes topDown {
+    0%{
+        transform: translateY(0);
+    }
+   
+      100%{
+       transform: translateY(-20px);
+    }
+}
+
+.top-intro-text{
+       font-family: system-ui;
+    font-size: 1.5rem; 
+    margin-left: 3rem;
+}
+
+.sm-intro-text{
+       font-family: system-ui;
+    font-size: 1.3rem; 
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    
+}
+
+.personal-intro h2{
+    /* width: 400px; */
+    font-family: system-ui;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    margin-bottom: 1.5rem;
+}
+.personal-intro span{
+    padding: 12px 32px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-family: system-ui;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    margin-left: 1rem;
+}
+
+.personal-intro span:hover{
+    background-color: rgb(43, 42, 41);
+    color: white;
+}
+
+/* about-section style */
+.about-section{
+    background-color: rgb(248, 244, 244);
+    padding: 2rem 1rem;
+}
+
+.h5-text, .h2-text{
+    font-family: system-ui;
+    color: black;
+    text-align: center;
+}
+
+.h5-text{
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.h2-text{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-wrapper{
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+.bio-image{
+    width: 400px;
+    max-width: 90%;
+    border-radius: 1rem;
+    display: block;
+    margin: 0 auto;
+    animation: popMoveRight 3s ease-in-out infinite alternate;
+}
+
+@keyframes popMoveRight {
+  0%{
+        transform: translateX(20px);
+       
+    }
+   
+      100%{
+       transform: translateX(-20px);
+        
+    }
+}
+
+.bio-card p{
+    font-family: system-ui;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    background-color: rgba(255, 255, 255, 0.219);
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.policy-show{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+    display: none;
+    transition: .3s ease-in-out;
+    transform: scale(0);
+}
+
+/* policy-card */
+.policy-card{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 500px;
+    padding: 2rem;
+    background-color: white;
+    font-family: system-ui;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    box-shadow: 0 3px 10px rgba(32, 32, 32, 0.274);
+    border-radius: 0.5rem;
+}
+
+.showPopPolicy{
+    display: flex;
+     transform: scale(1);
+}
+
+.close-btn{
+    display: block;
+    padding:10px 24px;
+    background-color: rgb(245, 58, 58);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: auto;
+
+}
+
+/* flex-container */
+.flex-container{
+    padding: 3rem 1rem;
+}
+
+.picShow{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    gap: 1rem;
+}
+
+.picShow img{
+    max-width: 100%;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.picShow img:hover{
+transform: scale(1.1);
+}
+
+
+
+/* menu */
+.menu{
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-color: rgb(49, 49, 49);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: width .3s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    padding: 10px 5px;
+    color: white;
+    z-index: 10000;
+}
+
+.menu p a{
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+    padding: 3px;
+    color: white;
+}
+
+.menu p:last-child{
+      margin-bottom: none;
+}
+
+.menu a:hover{
+    background-color: black;
+}
+
+.contact-section{
+    padding: 4rem 1rem;
+}
+
+/* links-box */
+.links-box{
+    font-family: system-ui;
+    /* background-color: orange; */
+    padding: 1rem;
+    font-size: 1.7rem;
+    line-height: 1.5rem;
+    /* border: 0.5px solid lightgray; */
+    border-radius: 1rem;
+}
+
+.inner-txt{
+    margin-bottom: 0.5rem;
+}
+
+.inner-links{
+    text-decoration: none;
+}
+
+/* message-box */
+.message-box{
+    border: 0.5px solid lightgray;
+    border-radius: 1rem; 
+      padding: 1rem;
+}
+
+.message-h2{
+    font-family: system-ui;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+form{
+    width: 100%;
+}
+
+label{
+    font-family: system-ui;
+    color: black;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input-filed{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    font-family: system-ui;
+    font-size: 16px;
+     color: black;
+      outline: 0px solid transparent;
+      border-radius: 5px;
+      border: 1px solid black;
+     
+}
+
+.inner-links i{
+    margin-right: 10px;
+}
+
+
+.message{
+    min-width: 100%;
+    max-width: 100%;
+      font-family: system-ui;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 1rem;
+    outline: 1px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input-filed:focus{
+     outline: 1px solid rgb(5, 5, 5);
+     border: none;
+}
+
+.btn-submit{
+   display: block; 
+   padding: 12px 24px;
+   background-color: black;
+   color: white;
+   border-radius: 5px;
+   font-family: system-ui;
+   font-size: 18px;
+   margin: 0 auto;
+}
+
+.alertPop{
+position: fixed;
+top: -10%;
+left: 50%;
+z-index: 10000;
+width: 300px;
+background-color: rgb(191, 245, 245);
+border-radius: 0.5rem;
+padding: 1rem 2rem;
+transform: translateX(-50%);
+transition: .3s ease-in;
+display: block;
+color: black;
+font-family: system-ui;
+text-align: center;
+}
+
+.alertPopShow{
+    top: 2%;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-page{
+        width: 100%;
+        padding-top: 75px;
+    }
+
+    .container-wrapper, .about-wrapper, .picShow{
+        grid-template-columns: 1fr;
+         
+    }
+
+    .nav-box h1{
+        font-size: 1.5rem;
+    }
+
+    .personal-intro h2{
+    line-height: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.bio-card p{
+    margin-top: 1rem;
+    font-family: system-ui;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+     background-color: rgba(255, 255, 255, 0.219);
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+}
+
+.policy-card{
+    width: 400px;
+    overflow: scroll;
+       font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+.about-section{
+    padding-top: 3rem;
+}
+@keyframes popMoveRight {
+  0%{
+        transform: translateX(10px);
+       
+    }
+   
+      100%{
+       transform: translateX(-10px);
+        
+    }
+}
+
+.top-intro-text{
+    margin-top: 1.5rem;
+}
+
+.inner-links h5, a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+}
+
+.policy-card{
+    overflow-y: scroll;
+    line-height: 1.5rem;
+}
+
+.policy-btn{
+    padding: 8px 8px;
+}
+
+}
+
+
+@media (max-with: 400px) {
+    .hero-page{
+        width: 100%;
+        padding-top: 75px;
+    }
+
+    .container-wrapper, .about-wrapper, .picShow{
+        grid-template-columns: 1fr;
+         
+    }
+
+    .nav-box h1{
+        font-size: 1rem;
+    }
+
+    .personal-intro h2{
+    line-height: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.bio-card p{
+    margin-top: 1rem;
+    font-family: system-ui;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+     background-color: rgba(255, 255, 255, 0.219);
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+}
+
+.policy-card{
+    width: 400px;
+    overflow: scroll;
+       font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+.about-section{
+    padding-top: 3rem;
+}
+}

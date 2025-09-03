@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>augustus.com</title>
+     <script src="https://kit.fontawesome.com/41d51bfab0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="nav-container" id="navContainer">
+        <nav class="nav-box">
+            <h1>A.A AUGUSTUS</h1>
+            <button class="policy-btn" onclick="openPolicy()">My policies</button>
+        </nav>
+    </div>
+    <div class="hero-page" id="home">
+        <div class="container-wrapper">
+             <img src="profile pic augustus.jpg" alt="picture" class="profile-pic">
+           
+            <div class="personal-intro">
+                 <h5 class="top-intro-text">Hello!, I'm </h5>
+                <h2>Amoabeng Augustus Ampaw </h2>
+                <h5 class="sm-intro-text ">Quantitative, Economics and Accounting Tutorial Facilitator.
+                    PASSAG President Hopeful 25/26
+                </h5>
+                <span>Email me</span>
+                <span>Call me</span>
+            </div>        
+        </div>
+    </div>
+
+    <section class="about-section" id="about">
+        <h5 class="h5-text">Know more</h5>
+        <h2 class="h2-text">About ME</h2>
+
+        <div class="about-wrapper">
+            <img src="Biopic.jpg" alt="bio-pic" class="bio-image">
+
+            <div class="bio-card">
+                <p>
+                    Amoabeng Augustus Ampaw is my name. <br> A level 200
+                     student of Koforidua Technical University studying procurement
+                      and supply Chain Management. Augustus is a person who assist 
+                      students in their academics and also offer advice to students which goes a long way to shape their
+                       academic journey. Augustus takes students through tutorials on courses such as Accounting, macro economics , 
+                    Quantitative Methods and other related procurement courses with a rate
+                     free. I am currently an aspirant for PASSG president in the upcoming election 25/26.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="flex-container">
+            <div class="picShow">
+                <img src="INTENT FLAYER 2.jpg" alt="pic">
+                <img src="New Month .jpg" alt="pic">
+                <img src="BOTH.jpg" alt="pic">
+                <img src="redesign.jpg" alt="pic">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="policy-show" id="policy">
+        <div class="policy-card">
+            As a passionate student of procurement and supply, I am committed to fostering an environment
+             of excellence and innovation within our association.
+
+My vision for PASSAG is rooted in the principles of Total Quality Management (TQM). 
+I believe that by embracing 
+a culture of continuous improvement, collaboration and accountability, we can elevate our standards and achieve 
+
+remarkable outcomes. Together, we can enhance our academic experiences, strengthen our 
+professional networks and prepare ourselves to be leaders in the field of procurement and supply.
+
+I am dedicated to creating opportunities for skill development, knowledge sharing and meaningful engagement among 
+our members. With your support, I will work tirelessly to ensure that our voices are heard and our aspirations are realized.
+
+Let us embark on this journey together towards a brighter future for PASSAG. I humbly ask for your vote and support
+ in this upcoming election.
+
+Thank you. <br>
+
+<button class="close-btn" id="close-btn">Close</button>
+        </div>
+
+    </div>
+
+
+    <div class="menu">
+        <p><a href="#home">Home</a></p>
+        <p><a href="#about">About</a></p>
+        <p><a href="#contact">Contact</a></p>
+    </div>
+
+    <section class="contact-section" id="contact">
+             <h5 class="h5-text">Get in touch</h5>
+        <h2 class="h2-text">Contact ME</h2>
+        <div class="about-wrapper">
+        
+                <div class="links-box">
+                    <div class="inner-links">
+                        <h5 class="inner-txt"><i class="fa-solid fa-envelope"></i>Email: augustusampaw@gmail.com</h5>
+                    </div>
+
+                    <div class="inner-links">
+                        <h5 class="inner-txt"> <i class="fa-brands fa-whatsapp"></i>whatsapp: 0550371266 </h5>
+                    </div>
+
+                    <div class="inner-links">
+                        <h5 class="inner-txt">  <i class="fa-solid fa-phone"></i>Phone: 0550371266 </h5>
+                    </div>
+
+                    <!-- <div class="inner-links">
+                        <h5 class="inner-txt">  <i class="fa-brands fa-linkedin"></i>linkedin </h5>
+                    </div> -->
+
+                </div>
+
+                <div class="message-box">
+                    <h2 class="message-h2">Send a email</h2>
+
+                    <form >
+                        <label for="Full Name">Full Name:</label>
+                        <input type="text" placeholder="Full Name here" id="fullname" class="input-filed">
+
+                        <label for="Full Name">Email:</label>
+                        <input type="text" placeholder="Email here" id="email" class="input-filed">
+
+                         <label for="Full Name">Message:</label>
+                        <textarea name="message" id="message" class="message"></textarea>
+
+                        <button type="submit" class="btn-submit" id="btn-Sub">Send Mail</button>
+                    </form>
+                </div>
+        </div>
+    </section>
+
+    <div class="alertPop" id="alertPop">
+    </div>
+
+    <script>
+function openPolicy(){
+    const myPolicyPage = document.getElementById("policy");
+    myPolicyPage.classList.add("showPopPolicy");
+}
+
+document.getElementById("close-btn").addEventListener('click', ()=>{
+  const myPolicyPage = document.getElementById("policy");
+    myPolicyPage.classList.remove("showPopPolicy");
+})
+
+addEventListener('scroll', ()=>{
+    if(scrollY > 10){
+        const navContainer = document.getElementById("navContainer");
+        navContainer.classList.add("navContainer")
+
+    }
+})
+
+document.getElementById("btn-Sub").addEventListener('click',(e)=>{
+    e.preventDefault();
+const fullname = document.getElementById("fullname").value.trim();
+const email = document.getElementById("email").value.trim();
+const message = document.getElementById("message").value.trim();
+if(!fullname || !email || !message){
+const alertPop = document.getElementById("alertPop");
+alertPop.classList.add("alertPopShow");
+alertPop.style.backgroundColor = "red";
+alertPop.textContent = "Please fill all inputs";
+setTimeout(()=>{
+    alertPop.classList.remove("alertPopShow");
+}, 3000);
+return;
+}
+
+const alertPop = document.getElementById("alertPop");
+alertPop.classList.add("alertPopShow");
+alertPop.textContent = "Mail sent successful";
+
+setTimeout(()=>{
+    alertPop.classList.remove("alertPopShow");
+}, 3000)
+
+})
+
+
+ </script>
+
+    
+</body>
+</html>
