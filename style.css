@@ -389,6 +389,7 @@ transform: scale(1.1);
     font-family: system-ui;
     color: black;
     margin-bottom: 1rem;
+     text-align: center;
 }
 
 form{
@@ -590,4 +591,5 @@ text-align: center;
 .about-section{
     padding-top: 3rem;
 }
+
 }
