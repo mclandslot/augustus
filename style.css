@@ -59,6 +59,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
     transition: .3s ease-in;
+    border: none;
 }
 
 .policy-btn:hover{
@@ -386,10 +387,10 @@ transform: scale(1.1);
 }
 
 .message-h2{
+    text-align: center;
     font-family: system-ui;
     color: black;
     margin-bottom: 1rem;
-     text-align: center;
 }
 
 form{
@@ -448,6 +449,7 @@ label{
    font-family: system-ui;
    font-size: 18px;
    margin: 0 auto;
+   border: none;
 }
 
 .alertPop{
@@ -472,11 +474,10 @@ text-align: center;
 }
 
 
-
 @media (max-width: 768px) {
     .hero-page{
         width: 100%;
-        padding-top: 75px;
+        padding-top: 80px;
     }
 
     .container-wrapper, .about-wrapper, .picShow{
@@ -513,7 +514,9 @@ text-align: center;
 }
 
 .about-section{
+    width: 100%;
     padding-top: 3rem;
+    padding: 1rem;
 }
 @keyframes popMoveRight {
   0%{
@@ -548,48 +551,20 @@ text-align: center;
 
 }
 
-
-@media (max-with: 400px) {
-    .hero-page{
-        width: 100%;
-        padding-top: 75px;
-    }
-
-    .container-wrapper, .about-wrapper, .picShow{
-        grid-template-columns: 1fr;
-         
-    }
-
-    .nav-box h1{
-        font-size: 1rem;
-    }
-
-    .personal-intro h2{
-    line-height: 4rem;
-    margin-bottom: 0.5rem;
-}
-
-.bio-card p{
-    margin-top: 1rem;
-    font-family: system-ui;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    text-align: left;
-     background-color: rgba(255, 255, 255, 0.219);
-    padding: 1rem 0.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid lightgray;
-}
-
-.policy-card{
-    width: 400px;
-    overflow: scroll;
-       font-size: 1rem;
-    line-height: 1.7rem;
+@media (max-width: 320px) {
+    .policy-btn{
+    padding: 8px 8px;
+    font-size: 10px;
+    color: orange;
 }
 
 .about-section{
-    padding-top: 3rem;
+background-color: orangered;
+}
+
+.nav-box{
+    width: 100%;
+    background-color: orange;
 }
 
 }
